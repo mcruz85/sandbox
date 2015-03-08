@@ -3,6 +3,7 @@
 <head>
 	<meta charset="UTF-8">
 	<title>Welcome</title>
+	<link rel="stylesheet" href="assets/vendor/spinkit/css/spinners/7-three-bounce.css">
 	<link rel="stylesheet" href="assets/stylesheet/style.css">
 </head>
 <body>
@@ -13,19 +14,29 @@
 	
 		<div class="box">
 			<ul class="contacts">
-				<li><a id="1" href="#">Lorem ipsum dolor sit amet</a></li>
-				<li><a id="2" href="#">Consectetur adipisicing elit</a></li>
-				<li><a id="3" href="#">Soluta eligendi alias</a></li>
+				<li><a data-id="101" href="#">Lorem ipsum dolor sit amet</a></li>
+				<li><a data-id="102" href="#">Consectetur adipisicing elit</a></li>
+				<li><a data-id="103" href="#">Soluta eligendi alias</a></li>
 			</ul>
 			<a href="" class="show-more">Load more</a>
 		</div>
 
 		<div class="modal">
-			<a href="#" class="close">Fechar</a>
-			<h1>Detalhes</h1>
-			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corrupti omnis dolore minima explicabo deleniti vero ut, fuga, quisquamid doloribus earum ullam! Adipisci.</p>
+			<a href="javascript:;" class="close">Fechar</a>
+			<h1 id="nome"></h1>
+			<p id="_id"><strong>Id: </strong></p>
+			<p id="email"><strong>Email: </strong></p>
+
 		</div>
+
+		<div class="sk-spinner sk-spinner-three-bounce">
+ 	    	<div class="sk-bounce1"></div>
+ 	      	<div class="sk-bounce2"></div>
+    	   	<div class="sk-bounce3"></div>
+     	</div>
+
 		<div class="overlay"></div>
+		<div class="overlay-load"></div>
 
 
 	</div>

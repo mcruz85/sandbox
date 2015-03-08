@@ -71,7 +71,7 @@
 	
 
 
-.overlay {
+.overlay, .overlay-load {
   position: fixed;
   top: 0;
   left: 0;
@@ -80,7 +80,19 @@
   height: 100%;
 }
 
+.overlay-load {
+	display: none;
+}
 
 .modal, .overlay {
 	display: none;
+}
+
+.sk-spinner-three-bounce {
+	display: none;
+}
+
+.sk-spinner-three-bounce div {
+	background-color: #FFF;
+	z-index: 0;
 }
