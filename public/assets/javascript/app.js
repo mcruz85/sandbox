@@ -1,7 +1,3 @@
-var spinner = $(".sk-spinner");
-var modal = $(".modal");
-
-
 var myAPP = {
 
   init: function( settings ){
@@ -9,7 +5,9 @@ var myAPP = {
     myAPP.config = {
     	urlList: "contatos",
     	urlBase: "contato",
-    	container: $("ul.contacts")
+    	container: $("ul.contacts"),
+    	modal: $(".modal"),
+    	spinner: $(".sk-spinner")
     }
 
     // Allow overriding the default config
@@ -31,23 +29,23 @@ var myAPP = {
   },
 
 
-  onItemClick: function(evt) {
+  onItemClick: function(event) {
 
   	$.ajax({
-	  dataType: "json",
-	  url: myAPP.config.urlBase + "/" + $(this).data("id"),	  
-	  success: myAPP.viewDetails
-	});
+	  	dataType: "json",
+	  	url: myAPP.config.urlBase + "/" + $(this).data("id"),	  
+	  	success: myAPP.viewDetails
+		});
 
-	evt.preventDefault();
+		event.preventDefault();
   },
 
   viewDetails: function(item) {
 
-    modal.find("#nome").text(item.nome);
-	modal.find("#_id").text(item._id);
-	modal.find("#email").text(item.email);
-	$(".modal, .overlay").show();
+  	myAPP.config.modal.find("#nome").text(item.nome);
+		myAPP.config.modal.find("#_id").text(item._id);
+		myAPP.config.modal.find("#email").text(item.email);
+		$(".modal, .overlay").show();
 
   },
 
@@ -89,12 +87,12 @@ var myAPP = {
 
   onAjaxStart: function() {
     $(".overlay-load").show();
-  	spinner.show();
+  	myAPP.config.spinner.show();
   },
 
   onAjaxStop: function() {
     $(".overlay-load").hide();
-  	spinner.hide();
+  	myAPP.config.spinner.hide();
   },
 
   createList: function(items) {
