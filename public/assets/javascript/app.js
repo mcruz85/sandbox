@@ -56,32 +56,29 @@ var myAPP = {
   onClickShowMore: function(event) {
 
   	$.ajax({
-	  dataType: "json",
-	  url: myAPP.config.urlList,
-	  success: function(items) {
+	  	dataType: "json",
+	  	url: myAPP.config.urlList,
+	  	success: function(items) {
 
-	  	myAPP.createList(items);
+	  		myAPP.createList(items);
 
-	    $("ul").fadeOut("fast", function(){
-	      $("ul").fadeIn("slow");	
-	     });
-	       
-	  }
-	});  
-
-  	event.preventDefault();
-
+	    	$("ul").fadeOut("fast", function(){
+	      	$("ul").fadeIn("slow");	
+	    	});	       
+	  	}
+		});  
+		
   },
 
   createItem: function(item) {
-	var li = $("<li/>")
-		.appendTo(myAPP.config.container);
+		var li = $("<li/>")
+			.appendTo(myAPP.config.container);
 
-	var aa = $("<a/>")
-		.data("id", item._id)
-		.attr("href", "#")
-		.text(item.nome)
-		.appendTo(li);
+		var aa = $("<a/>")
+			.data("id", item._id)
+			.attr("href", "#")
+			.text(item.nome)
+			.appendTo(li);
 
   },
 
@@ -97,8 +94,8 @@ var myAPP = {
 
   createList: function(items) {
   	$.each(items, function(i, item) {
-	  myAPP.createItem(item);
-	});
+	  	myAPP.createItem(item);
+		});
   }
 
 };

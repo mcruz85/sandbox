@@ -17,13 +17,12 @@ module.exports = function() {
 
 	  var id = req.params.id;
 
-	  console.log('obtemContato', id);
-
+/*
 	  var tmp =0;
 	  for (var i = 0; i < 1000000000; i++) {
 	  	tmp++;
 	  };
-
+*/
 	  console.log('fim');
 
 	  var contato = contatos.filter(function(contato){
