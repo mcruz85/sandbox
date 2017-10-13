@@ -1,8 +1,8 @@
 var contatos = [
-  {_id: 101, nome: 'Marcus', email: 'marcus@mail.com'},
+  {_id: 101, nome: 'Marcus' , email: 'marcus@mail.com' },
   {_id: 102, nome: 'Gabriel', email: 'gabriel@mail.com'},
-  {_id: 103, nome: 'Pedro', email: 'pedro@mail.com'},
-  {_id: 104, nome: 'José', email: 'jose@mail.com'}
+  {_id: 103, nome: 'Pedro'  , email: 'pedro@mail.com'  },
+  {_id: 104, nome: 'José'   , email: 'jose@mail.com'   }
 ];
 
 
@@ -21,7 +21,7 @@ module.exports = function() {
 					tmp++;
 				};
 		*/
-		
+
 	  console.log('fim');
 
 	  var contato = contatos.filter((contato) => {
