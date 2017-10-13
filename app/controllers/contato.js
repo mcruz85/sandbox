@@ -5,7 +5,6 @@ var contatos = [
   {_id: 104, nome: 'José'   , email: 'jose@mail.com'   }
 ];
 
-
 module.exports = function() {
 	var controller = {};
 
