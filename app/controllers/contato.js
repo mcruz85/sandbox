@@ -25,7 +25,7 @@ module.exports = function() {
 */
 	  console.log('fim');
 
-	  var contato = contatos.filter(function(contato){
+	  var contato = contatos.filter((contato) => {
 	    return contato._id == id;		
 	  })[0];
 
