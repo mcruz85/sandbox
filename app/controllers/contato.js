@@ -15,12 +15,13 @@ module.exports = function() {
 
 	controller.obtemContato = function(req, res) {
            var id = req.params.id;
-/*
-	  var tmp =0;
-	  for (var i = 0; i < 1000000000; i++) {
-	  	tmp++;
-	  };
-*/
+		/*
+				var tmp =0;
+				for (var i = 0; i < 1000000000; i++) {
+					tmp++;
+				};
+		*/
+		
 	  console.log('fim');
 
 	  var contato = contatos.filter((contato) => {
